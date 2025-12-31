@@ -1,0 +1,139 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+header {
+  background-image: url('C:\Users\FAIZAN COMPUTER\OneDrive\Desktop\my-portfolio\Images\background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: white;
+  padding: 30px 20px;          /* increases space inside header */
+  height: 150px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  padding: 20px 20px;
+  text-align: center;
+}
+
+/* Skills and Projects */
+.skill-card, .project-card {
+  display: inline-block;
+  padding: 20px 25px;
+  margin: 10px;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skill-card:hover, .project-card:hover {
+  background-color: #dfe3ee;
+  transform: scale(1.05);
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #6A5ACD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* ========================
+   Right-to-Left Project Slider
+   ======================== */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; /* adjust as needed */
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slider-track {
+  display: flex;
+  width: calc(300px * 6); /* total width = number of images × width of each image */
+  animation: slide 20s linear infinite; /* continuous sliding */
+}
+
+.slider-track img {
+  width: 300px;       /* adjust image width */
+  margin-right: 20px; /* space between images */
+  border-radius: 8px;
+}
+
+/* Animation for sliding from right to left */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* slides left by half total width */
+}
+
+@media (max-width: 768px) {
+  .slider-track img {
+    width: 200px; /* smaller images for mobile */
+    margin-right: 10px;
+  }
+  header {
+    height: 300px; /* adjust header height on small screens */
+    padding: 30px 10px;
+  }
+}
+
+.slider-track img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+footer {
+  background-color: #000435;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer a {
+  color: #E03FD8;
+  text-decoration: none;
+  margin: 0 5px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
